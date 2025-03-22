@@ -1,0 +1,313 @@
+/* Google Fonts (used in HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Markazi+Text:wght@400..700&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cairo:wght@400;900&family=Girassol&family=Lobster&family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Pacifico&family=Quicksand:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Montserrat+Subrayada|PT+Sans+Narrow|Pacifico|Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tulpen+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100&display=swap');
+
+/* Body styling */
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #000; /* page background color */
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #00aeff, #a68eff);
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}
+
+/* Font classes */
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.markazi-text-side {
+  font-family: "Markazi Text", serif;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+}
+.fauna-one-regular {
+  font-family: "Fauna One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* PName heading style */
+.pname {
+  font-size: 50px;
+}
+
+/* Hire Me button */
+.hirebtn {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px; 
+  background: #8E44AD;
+  border: 0px;
+  color: #F1C40F;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 40px;
+}
+.hirebtn:hover {
+  background: #F1C40F;
+  color: #8E44AD;
+}
+
+/* Social icons */
+.socialIcons {
+  color: white;
+  width: 4%;
+  height: auto;
+}
+.socialIcons:hover {
+  width: 50px;
+  height: auto;
+  transition: 0.5s;
+  color: #9176FC;
+}
+
+/* Titles for sections */
+#techdiv,
+#certdiv,
+#traindiv,
+#projectdiv,
+#portdiv {
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* Adjust specific colors per section if needed */
+#certdiv {
+  color: #F4B41A;
+}
+#traindiv {
+  color: #4ACFAC;
+}
+#projectdiv {
+  color: #7D8CE0;
+}
+#portdiv {
+  color: #B44956;
+}
+
+/* Container for content */
+.scroll-container {
+  height: auto;
+  min-height: 450px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.scroll-container:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.scroll-element,
+.scroll-caption {
+  width: 50%;
+}
+.scroll-element {
+  min-height: 30px;
+  height: auto;
+  width: 50%;
+  border-radius: 60px;
+  background-color: #E2BE67;
+  float: left;
+}
+.scroll-caption {
+  margin: 1rem;
+}
+
+/* Footer */
+.footer-container {
+  background-color: #f8f9fa; /* Light background */
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0; /* Subtle border */
+  text-align: center;
+  color: #555; /* Darker, professional text color */
+  font-size: 0.9em;
+}
+
+.footer-container a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 650px) {
+  .scroll-container,
+  .scroll-container:nth-of-type(even) {
+    flex-direction: column;
+    align-content: inherit;
+  }
+
+  .scroll-element,
+  .scroll-caption {
+    width: 100%;
+  }
+
+  #techdiv {
+    font-size: 30px;
+  }
+
+  .pname {
+    font-size: 30px;
+  }
+}
+
+/* Scroll-based animations */
+.js-scroll {
+  opacity: 0;
+  padding: 50px;
+  transition: opacity 500ms;
+}
+.js-scroll.scrolled {
+  opacity: 1;
+}
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+.scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Text scramble styling */
+.text {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 28px;
+  color: #fafafa;
+}
+.dud {
+  color: #757575;
+}
+/* Certifications Carousel Container */
+.cert-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Carousel Wrapper */
+.cert-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Carousel Items */
+.cert-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.cert-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(244, 208, 63, 0.3);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(244, 208, 63, 0.7);
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+
+.carousel-arrow.next {
+  right: 10px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(244, 208, 63, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators span.active {
+  background: #F4D03F;
+  transform: scale(1.2);
+}
